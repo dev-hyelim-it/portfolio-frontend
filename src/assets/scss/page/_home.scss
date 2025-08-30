@@ -1,0 +1,243 @@
+.home {
+  align-items: center;
+  justify-content: center;
+  min-height: auto;
+  gap: 4rem;
+  padding: 2rem;
+  &__blurry-gradient-blue {
+    position: fixed;
+    right: 10%;
+    bottom: 10%;
+    width: 500px;
+    height: 500px;
+    rotate: 10deg;
+    opacity: 0.7;
+    border-radius: 100% 50% 100% 0;
+    background: radial-gradient(
+      circle at 50% 50%,
+      #4d5bce,
+      rgba(76, 0, 255, 0)
+    );
+    filter: blur(70px);
+    z-index: 1;
+  }
+  &__blurry-gradient-green {
+    position: fixed;
+    top: 10%;
+    right: 35%;
+    width: 400px;
+    height: 400px;
+    rotate: 20deg;
+    opacity: 0.5;
+    border-radius: 100% 0 0;
+    background: radial-gradient(
+      circle at 50% 50%,
+      #43d9ad,
+      rgba(76, 0, 255, 0)
+    );
+    filter: blur(100px);
+    z-index: 1;
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 450px;
+  }
+  &__text-start {
+    font-size: 18px;
+    color: #e5e9f0;
+  }
+  &__name {
+    margin: 16px 0;
+    color: #e5e9f0;
+    font-size: 58px;
+  }
+  &__developer-box {
+    margin-bottom: 48px;
+    width: 372px;
+    font-size: 32px;
+    color: #4d5bce;
+  }
+  &__developer {
+    padding-right: 2px;
+    width: 100%;
+    font-size: 32px;
+    color: #4d5bce;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid hsla(0, 0%, 100%, 0.75);
+    animation: typing 3s steps(30) 1s 1 normal both,
+      textCursor 0.8s steps(30) infinite normal;
+  }
+  &__bottom-text-box {
+    margin: 40px 0;
+  }
+  &__page {
+    margin-bottom: 16px;
+    color: #8da9c6;
+  }
+  &__const {
+    color: #6172ff;
+  }
+  &__github {
+    color: #43d9ad;
+  }
+  &__equals {
+    color: #fff;
+  }
+  &__github-link {
+    color: #e99287;
+  }
+  &__right {
+    border-radius: 10px;
+  }
+  &__right-box {
+    position: relative;
+    padding: 20px;
+    width: 100%;
+    z-index: 10;
+  }
+  &__game-box {
+    width: 100%;
+  }
+  &__key-box {
+    &:first-child {
+      margin-bottom: 10px;
+    }
+  }
+  &__game-key {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 40px;
+    background-color: #000;
+    border-radius: 8px;
+    svg {
+      display: flex;
+      width: 20px;
+      height: 15px;
+    }
+    path {
+      color: #fff;
+    }
+  }
+  &__key-disable {
+    background-color: #1d1d1d8c;
+    path {
+      color: #ffffff8c;
+    }
+  }
+  #instructions {
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    background-color: rgba(1, 20, 35, 0.19);
+    border-radius: 7px;
+  }
+  #console-button {
+    height: 25px;
+    width: 40px;
+    border-radius: 6px;
+  }
+  .skip-btn {
+    position: absolute;
+    top: 230px;
+    right: 32px;
+    padding: 10px;
+    color: #fff;
+    background: #011221;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    z-index: 999;
+  }
+}
+.slick {
+  &-list {
+    border-radius: 15px;
+  }
+  &-arrow {
+    top: 352px;
+    width: 87px;
+    height: 40px;
+    border-radius: 8px;
+    &::before {
+      content: "";
+    }
+    &:hover {
+      box-shadow: rgb(67, 217, 173) 0px 0px 10px;
+    }
+  }
+  &-prev {
+    left: 15px;
+  }
+  &-next {
+    right: 15px;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes textCursor {
+  0% {
+    border-right-color: #ffffffbf;
+  }
+  100% {
+    border-right-color: transparent;
+  }
+}
+
+@media (max-width: 767px) {
+  .home {
+    &__left {
+      justify-content: space-around;
+      width: 100%;
+      height: calc(100vh - 208px);
+    }
+    &__name {
+      font-size: 40px;
+    }
+    &__developer-box {
+      width: 290px;
+      font-size: 25px;
+    }
+    &__developer {
+      font-size: 25px;
+      animation: typing 3s steps(33) 1s 1 normal both,
+        textCursor 0.8s steps(33) infinite normal;
+    }
+    &__github-link {
+      display: flex;
+      margin: 15px 0 0 50px;
+    }
+    &__bottom-text-box {
+      margin: 0;
+    }
+    &__right {
+      display: none;
+    }
+    &__blurry-gradient-blue {
+      right: 20%;
+      bottom: 40%;
+      width: 250px;
+      height: 250px;
+      opacity: 0.8;
+    }
+    &__blurry-gradient-green {
+      top: 16%;
+      left: 11%;
+      width: 200px;
+      height: 200px;
+      opacity: 0.8;
+    }
+  }
+}

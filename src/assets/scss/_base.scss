@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Orbit&display=swap");
+.fira-code-light {
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+.fira-code-regular {
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.fira-code-medium {
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.fira-code-semibold {
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+.fira-code-bold {
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.orbit-regular {
+  font-family: "Orbit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.font-family {
+  font-family: "Fira Code", "Orbit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+  color: #85a5c4;
+  font-family: "Fira Code", monospace;
+  font-weight: 400;
+  font-size: 14px;
+  outline-style: none;
+}
+html {
+  background-color: rgb(1 12 21);
+  margin: 30px;
+  height: calc(100vh - 60px);
+  overflow: auto;
+}
+.slick-prev,
+.slick-next {
+  z-index: 10;
+}
+a {
+  text-decoration: none;
+}
+#root {
+  --tw-bg-opacity: 1;
+  background-color: rgb(1 22 39 / var(--tw-bg-opacity));
+  border: 1px solid #1e2d3d;
+  border-radius: 7px;
+}
+main {
+  height: calc(100vh - 174px);
+}
+.is-active {
+  color: #fff;
+}
+.is-hover:hover {
+  color: #fff;
+}
+.contacts {
+  &__tab-title {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    height: 35px;
+    color: #fff;
+    border-top: 1px solid #1e2d3d;
+    border-bottom: 1px solid #1e2d3d;
+  }
+  &__sub-tab {
+    margin: 18px 15px;
+  }
+  &__sub-tab-icon {
+    margin-right: 12px;
+  }
+}
+.tab-title-box {
+  height: 35px;
+  border-bottom: 1px solid #1e2d3d;
+  &--text {
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    height: 35px;
+    border-right: 1px solid #1e2d3d;
+  }
+}
+.icon-close {
+  margin: 0 12px;
+  color: #85a5c4;
+}
+::-webkit-scrollbar {
+  border-left: 1px solid #1e2d3d;
+  display: none;
+  width: 20px;
+}
+::-webkit-scrollbar-thumb {
+  background: #607b96;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@media (max-width: 767px) {
+  .m-display--none {
+    display: none !important;
+  }
+  html {
+    margin: 15px;
+    height: auto;
+  }
+  main {
+    margin-top: 56px;
+    height: auto;
+  }
+  .page__title {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    height: 70px;
+    color: #fff;
+    font-size: 16px;
+  }
+  .toggle-title {
+    margin-left: 8px;
+    color: #fff;
+  }
+  .contacts__tab-title {
+    margin-bottom: 5px;
+    background-color: #1e2d3d;
+    .contacts__sub-tab-icon {
+      margin-right: 4px;
+    }
+  }
+}

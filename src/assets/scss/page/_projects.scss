@@ -1,0 +1,227 @@
+@use "sass:list";
+
+$color_list: (#40cae2, #42b883, #9d16f7, #f89820, #6db33f, #3fa037);
+
+.project {
+  &__sub-tab {
+    flex-direction: column;
+    width: 275px;
+    border-right: 1px solid #1e2d3d;
+  }
+  &__sub-title-box {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    margin-bottom: 10px;
+    height: 35px;
+    border-bottom: 1px solid #1e2d3d;
+    path {
+      color: #fff;
+    }
+  }
+  &__sub-tab-list {
+    margin: 18px 15px;
+    cursor: pointer;
+    &:hover {
+      cursor: pointer;
+      .project__input {
+        box-shadow: 0 0 0 2px rgb(133, 165, 196);
+      }
+      .project__label {
+        color: #fff;
+      }
+    }
+  }
+  &__input {
+    width: 16px;
+    height: 16px;
+    background-color: #0000001a;
+    border-radius: 2px;
+    box-shadow: 0 0 0 2px #607b968b;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    &:checked {
+      & ~ label {
+        color: #fff;
+      }
+      background-color: #85a5c4;
+      background-image: url("../../../../public/images/check.svg");
+    }
+  }
+  &__lang-icon {
+    margin: 0 12px;
+    width: 24px;
+    height: 24px;
+  }
+  &__icon-react {
+    path {
+      color: #61dafb;
+    }
+  }
+  &__icon-vue {
+    path {
+      color: #42b883;
+    }
+  }
+  &__icon-css {
+    path {
+      color: #264de4;
+    }
+  }
+  &__icon-kotlin {
+    margin: 0 12px 0 14px;
+    width: 20px;
+    height: 20px;
+  }
+
+  &__label {
+    width: calc(100% - 53px);
+    font-size: 16px;
+    cursor: pointer;
+  }
+  &__content-box {
+    flex-direction: column;
+    width: calc(100% - 275px);
+    border-top: 1px solid #1e2d3d;
+    .tab-title-box--text {
+      width: auto;
+    }
+  }
+  &__grid {
+    padding: 50px 80px 40px;
+    gap: 20px;
+    grid-template-rows: repeat(2, 307px);
+    grid-template-columns: repeat(3, 1fr);
+    overflow: auto;
+  }
+  &__card-section {
+    flex-direction: column;
+    width: 100%;
+    @for $i from 1 through list.length($color_list) {
+      &:nth-child(#{$i}) {
+        .project__card-icon-box {
+          background-color: list.nth($color_list, $i);
+        }
+      }
+    }
+  }
+  &__card-title {
+    margin: 12px 0;
+    color: #799ffb;
+    font-size: 15px;
+  }
+  &__card-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #011221;
+    border: 1px solid #1e2d3d;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  &__card-top-box {
+    height: 120px;
+    overflow: hidden;
+  }
+  &__card-icon-box {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+    z-index: 10;
+    svg {
+      display: flex;
+      margin: auto;
+      width: 24px;
+      height: 26px;
+    }
+    path {
+      color: #000;
+    }
+    img {
+      filter: grayscale(1) brightness(0);
+    }
+  }
+  &__card-icon-kotlin {
+    width: 22px;
+  }
+  &__card-icon-java {
+    width: 90%;
+  }
+  &__card-icon-spring-boot {
+    width: 87%;
+  }
+  &__card-icon-spring-legacy {
+    width: 83%;
+  }
+  &__card-bottom-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 24px;
+    height: 140px;
+    border-top: 1px solid #1e2d3d;
+  }
+  &__card-text {
+    margin-bottom: 20px;
+    height: auto;
+    max-height: 40px;
+    line-height: 18px;
+    word-break: keep-all;
+    overflow: auto;
+  }
+  &__card-link {
+    padding: 8px 16px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #1c2b3a;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 767px) {
+  .project {
+    flex-direction: column;
+    &__sub-title-box {
+      background-color: #1e2d3d;
+    }
+    &__sub-tab {
+      width: 100%;
+      border-right: none;
+    }
+    &__sub-tab-list {
+      margin: 10px 15px;
+    }
+    &__lang-icon {
+      width: 20px;
+      height: 20px;
+    }
+    &__content-box {
+      margin-top: 5px;
+      width: 100%;
+      border: none;
+    }
+    .tab-title-box {
+      border: none;
+    }
+    .tab-title-box--text {
+      line-height: 24px;
+      border: none;
+      svg {
+        display: none;
+      }
+    }
+    &__grid {
+      padding: 10px 15px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
