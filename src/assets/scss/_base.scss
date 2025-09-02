@@ -68,6 +68,9 @@ a {
 main {
   height: calc(100vh - 174px);
 }
+.page__title {
+  display: none;
+}
 .is-active {
   color: #fff;
 }

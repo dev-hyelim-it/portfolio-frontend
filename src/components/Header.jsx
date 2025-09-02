@@ -17,7 +17,7 @@ function DesktopHeader() {
       <div className="header__left-box flex flex-1 items-center">
         {/* name */}
         <div className="header__name-box w-[275px] font-light tracking-wider text-white">
-          dev-hyelim
+          LAB - HyeLim.Jang
         </div>
 
         {/* center */}
@@ -68,7 +68,7 @@ function MobileHeader() {
       <section className="fixed m-header__section flex items-center justify-between">
         {/* name */}
         <div className="m-header__name header__name-box font-light tracking-wider text-white">
-          dev-hyelim
+          LAB - HyeLim.Jang
         </div>
 
         {/* hamburger / close button */}
