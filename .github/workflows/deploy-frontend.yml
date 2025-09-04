@@ -67,6 +67,11 @@ jobs:
           aws-region: ${{ env.AWS_REGION }}
           role-to-assume: ${{ vars.FRONTEND_ROLE_ARN }}
           role-session-name: github-frontend-deploy
+      - name: Who am I (STS)
+        run: aws sts get-caller-identity
+
+      - name: Can I list EB bucket?
+        run: aws s3 ls s3://$EB_S3_BUCKET/ | head
 
       - name: Sync to S3
         run: |
