@@ -1,0 +1,27 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Dependencies
+/node_modules/
+
+# Build outputs
+/dist/
+/build/
+
+# Env files (CI에서 생성/주입 권장)
+.env*
+!.env.example   # ← 예시 파일은 커밋 가능(선택)
+
+# Tools / Caches
+/.react-router/   # (React Router/Remix 계열 캐시가 생길 때)
+/.vite/           # 경우에 따라 루트에 생성되는 캐시
+/coverage/        # 테스트 커버리지(쓰면)
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# IDE
+/.vscode/
+/.idea/
