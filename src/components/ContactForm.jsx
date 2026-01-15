@@ -10,7 +10,7 @@ const api = axios.create({
   baseURL: import.meta.env.VITE_API_BASE_URL || "",
 });
 function ContactForm() {
-  const isDesktop = useMediaQuery({ minWidth: 768 });
+  const isDesktop = useMediaQuery({ minWidth: 935 });
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [sent, setSent] = useState(null);
   const [loading, setLoading] = useState(false);

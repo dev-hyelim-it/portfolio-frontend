@@ -37,7 +37,7 @@ const techList = [
 ];
 
 function SidebarFilter({ selected, setSelected }) {
-  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const isMobile = useMediaQuery({ maxWidth: 934 });
   const [open, setOpen] = useState(false);
   useEffect(() => {
     setOpen(!isMobile);

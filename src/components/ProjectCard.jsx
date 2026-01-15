@@ -4,7 +4,8 @@ function ProjectCard({ project }) {
   return (
     <section className="project__card-section flex rounded border-gray-700 max-w-xs shadow p-4">
       <p className="project__card-title fira-code-bold">
-        {project.title}{" "}
+        {project.title}
+        <br />
         <span className="text-gray-400 fira-code-regular">
           {project.tech.map((t) => `_${t}`).join(" ")}
         </span>

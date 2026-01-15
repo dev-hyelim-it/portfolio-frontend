@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function ContactSidebar() {
-  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const isMobile = useMediaQuery({ maxWidth: 934 });
 
   const [open, setOpen] = useState(false);
   useEffect(() => {
@@ -44,7 +44,7 @@ function ContactSidebar() {
             icon={faEnvelope}
             className="contacts__sub-tab-icon"
           />
-          dev.hyelim.it@gmail.com
+          wkdgoa3021@hanmail.net
         </li>
         <li className="flex items-center gap-2 contacts__sub-tab is-hover">
           <FontAwesomeIcon icon={faPhone} className="contacts__sub-tab-icon" />

@@ -133,6 +133,6 @@ function MobileHeader() {
 }
 
 export default function Header() {
-  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const isMobile = useMediaQuery({ maxWidth: 934 });
   return isMobile ? <MobileHeader /> : <DesktopHeader />;
 }

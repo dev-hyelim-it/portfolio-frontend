@@ -190,7 +190,7 @@ $color_list: (#40cae2, #42b883, #9d16f7, #f89820, #6db33f, #3fa037);
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 934px) {
   .project {
     flex-direction: column;
     &__sub-title-box {
@@ -230,7 +230,8 @@ $color_list: (#40cae2, #42b883, #9d16f7, #f89820, #6db33f, #3fa037);
     }
     &__grid {
       padding: 10px 15px;
-      grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
     }
   }
 }

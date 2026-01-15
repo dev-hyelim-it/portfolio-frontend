@@ -54,7 +54,7 @@ function Home() {
           <div className="home__developer-box flex">
             &gt;&nbsp;
             <h2 className="font-mono text-3xl text-cyan-400 mt-2 home__developer">
-              Backend Developer
+              Web Publisher
             </h2>
           </div>
         </div>

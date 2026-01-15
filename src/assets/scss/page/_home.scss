@@ -56,20 +56,19 @@
   }
   &__developer-box {
     margin-bottom: 48px;
-    width: 372px;
+    width: 295px;
     font-size: 32px;
     color: #4d5bce;
   }
   &__developer {
-    padding-right: 2px;
     width: 100%;
     font-size: 32px;
     color: #4d5bce;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid hsla(0, 0%, 100%, 0.75);
-    animation: typing 3s steps(30) 1s 1 normal both,
-      textCursor 0.8s steps(30) infinite normal;
+    animation: typing 2.8s steps(28) 0.8s 1 normal both,
+      textCursor 0.8s steps(28) infinite normal;
   }
   &__bottom-text-box {
     margin: 40px 0;
@@ -196,7 +195,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 934px) {
   .home {
     &__left {
       justify-content: space-around;
@@ -207,12 +206,12 @@
       font-size: 40px;
     }
     &__developer-box {
-      width: 290px;
+      width: 232px;
       font-size: 25px;
     }
     &__developer {
       font-size: 25px;
-      animation: typing 3s steps(33) 1s 1 normal both,
+      animation: typing 2.8s steps(33) 0.8s 1 normal both,
         textCursor 0.8s steps(33) infinite normal;
     }
     &__github-link {

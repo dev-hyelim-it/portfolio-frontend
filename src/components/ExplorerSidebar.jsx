@@ -12,8 +12,8 @@ import { useMediaQuery } from "react-responsive";
 function ExplorerSidebar({ active, onSelect }) {
   const sections = ["personal-info", "professional-info", "hobbies-info"];
 
-  // 767px 이하 = 모바일
-  const isMobile = useMediaQuery({ maxWidth: 767 });
+  // 934px 이하 = 모바일
+  const isMobile = useMediaQuery({ maxWidth: 934 });
 
   // 데스크톱에선 항상 펼침, 모바일에선 기본 닫힘
   const [contactsOpen, setContactsOpen] = useState(false);
@@ -25,7 +25,7 @@ function ExplorerSidebar({ active, onSelect }) {
     if (isMobile) setContactsOpen((v) => !v); // 모바일에서만 토글
   };
 
-  // ✅ display 전환 클래스 (hidden ↔ flex)
+  // display 전환 클래스 (hidden ↔ flex)
   const contactsDisplayCls = isMobile
     ? contactsOpen
       ? "flex"
@@ -76,7 +76,7 @@ function ExplorerSidebar({ active, onSelect }) {
         <h2 className="toggle-title">Contacts</h2>
       </button>
 
-      {/* ✅ display 제어: hidden / flex 로만 제어 */}
+      {/* display 제어: hidden / flex 로만 제어 */}
       <ul
         id="contacts-list"
         aria-hidden={isMobile ? !contactsOpen : false}
@@ -87,7 +87,7 @@ function ExplorerSidebar({ active, onSelect }) {
             icon={faEnvelope}
             className="contacts__sub-tab-icon"
           />
-          dev.hyelim.it@gmail.com
+          wkdgoa3021@hanmail.net
         </li>
         <li className="flex items-center gap-2 contacts__sub-tab is-hover">
           <FontAwesomeIcon icon={faPhone} className="contacts__sub-tab-icon" />
