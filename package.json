@@ -3,12 +3,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "react-scripts start",
     "dev": "vite --host",
-    "build": "react-scripts vite build",
+    "build": "vite build",
     "preview": "vite preview --host",
-    "deploy": "gh-pages -d build",
-    "predeploy": "npm run build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.0.0",
@@ -38,6 +37,7 @@
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "autoprefixer": "^10.4.21",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.5.6",
     "sass-embedded": "^1.89.2",
     "tailwindcss": "^4.1.11",

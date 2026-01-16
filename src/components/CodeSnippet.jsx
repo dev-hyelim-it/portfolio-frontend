@@ -5,6 +5,8 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { synthwave84 } from "react-syntax-highlighter/dist/esm/styles/prism";
 
+const BASE = import.meta.env.BASE_URL;
+
 function CodeSnippet({ snippet }) {
   const [openCommentIdx, setOpenCommentIdx] = useState(null);
 
@@ -25,7 +27,15 @@ function CodeSnippet({ snippet }) {
               <div className="about__coding-box-top">
                 <div className="about__user-box">
                   <div className="about__profile-img">
-                    <img src={snippet.img} alt={snippet.desc} />
+                    <img
+                      src={`${BASE}${snippet.img}`}
+                      alt={snippet.userName}
+                      className="about__profile-avatar"
+                      loading="lazy"
+                      onError={(e) => {
+                        e.currentTarget.src = `${BASE}images/default-avatar.png`;
+                      }}
+                    />
                   </div>
                   <div className="about__profile-text">
                     <p className="about__id fira-code-bold">

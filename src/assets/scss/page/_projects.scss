@@ -151,18 +151,10 @@ $color_list: (#40cae2, #42b883, #9d16f7, #f89820, #6db33f, #3fa037);
     img {
       filter: grayscale(1) brightness(0);
     }
-  }
-  &__card-icon-kotlin {
-    width: 22px;
-  }
-  &__card-icon-java {
-    width: 90%;
-  }
-  &__card-icon-spring-boot {
-    width: 87%;
-  }
-  &__card-icon-spring-legacy {
-    width: 83%;
+    &__card-icon-img {
+      height: auto;
+      display: block;
+    }
   }
   &__card-bottom-box {
     display: flex;

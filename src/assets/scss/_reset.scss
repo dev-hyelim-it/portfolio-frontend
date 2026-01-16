@@ -6,16 +6,16 @@ License: none (public domain)
 */
 
 * {
--webkit-box-sizing: border-box;
-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 html,
 body {
-margin: 0;
-padding: 0;
-border: 0;
-font-size: 100%;
-vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
 }
 
 div,
@@ -97,17 +97,17 @@ time,
 mark,
 audio,
 video {
-margin: 0;
-padding: 0;
-border: 0;
-font-size: 100%;
-font: inherit;
-vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 /* make sure to set some focus styles for accessibility */
 :focus {
-outline: 0;
+  outline: 0;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -122,51 +122,51 @@ hgroup,
 menu,
 nav,
 section {
-display: block;
+  display: block;
 }
 
 body {
-line-height: 1;
+  line-height: 1;
 }
 
 ol,
 ul {
-list-style: none;
+  list-style: none;
 }
 
 blockquote,
 q {
-quotes: none;
+  quotes: none;
 }
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-content: '';
-content: none;
+  content: "";
+  content: none;
 }
 
 table {
-border-collapse: collapse;
-border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-input[type='search']::-webkit-search-cancel-button,
-input[type='search']::-webkit-search-decoration,
-input[type='search']::-webkit-search-results-button,
-input[type='search']::-webkit-search-results-decoration {
--webkit-appearance: none;
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
 }
 
-input[type='search'] {
--webkit-appearance: none;
+input[type="search"] {
+  -webkit-appearance: none;
 }
 
 textarea {
-overflow: auto;
-vertical-align: top;
-resize: vertical;
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
 }
 
 /**
@@ -176,8 +176,8 @@ resize: vertical;
 audio,
 canvas,
 video {
-display: inline-block;
-max-width: 100%;
+  display: inline-block;
+  max-width: 100%;
 }
 
 /**
@@ -186,8 +186,8 @@ max-width: 100%;
 */
 
 audio:not([controls]) {
-display: none;
-height: 0;
+  display: none;
+  height: 0;
 }
 
 /**
@@ -196,7 +196,7 @@ height: 0;
 */
 
 [hidden] {
-display: none;
+  display: none;
 }
 
 /**
@@ -207,9 +207,9 @@ display: none;
 */
 
 html {
-font-size: 100%; /* 1 */
--webkit-text-size-adjust: 100%; /* 2 */
--ms-text-size-adjust: 100%; /* 2 */
+  font-size: 100%; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -ms-text-size-adjust: 100%; /* 2 */
 }
 
 /**
@@ -217,7 +217,7 @@ font-size: 100%; /* 1 */
 */
 
 a:focus {
-outline: thin dotted;
+  outline: thin dotted;
 }
 
 /**
@@ -226,7 +226,7 @@ outline: thin dotted;
 
 a:active,
 a:hover {
-outline: 0;
+  outline: 0;
 }
 
 /**
@@ -235,8 +235,8 @@ outline: 0;
 */
 
 img {
-border: 0; /* 1 */
--ms-interpolation-mode: bicubic; /* 2 */
+  border: 0; /* 1 */
+  -ms-interpolation-mode: bicubic; /* 2 */
 }
 
 /**
@@ -244,7 +244,7 @@ border: 0; /* 1 */
 */
 
 figure {
-margin: 0;
+  margin: 0;
 }
 
 /**
@@ -252,7 +252,7 @@ margin: 0;
 */
 
 form {
-margin: 0;
+  margin: 0;
 }
 
 /**
@@ -262,10 +262,9 @@ margin: 0;
 */
 
 legend {
-border: 0; /* 1 */
-padding: 0;
-white-space: normal; /* 2 */
-*margin-left: -7px; /* 3 */
+  border: 0; /* 1 */
+  padding: 0;
+  white-space: normal; /* 2 */
 }
 
 /**
@@ -275,20 +274,20 @@ white-space: normal; /* 2 */
 * 3. Improve appearance and consistency in all browsers.
 */
 button {
-border: none;
-background: none;
-padding: 0;
-margin: 0;
-font-family: system-ui, 'Apple SD Gothic Neo', 'Malgun Gothic', arial, sans-serif;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font-family: system-ui, "Apple SD Gothic Neo", "Malgun Gothic", arial,
+    sans-serif;
 }
 button,
 input,
 select,
 textarea {
-font-size: 100%; /* 1 */
-margin: 0; /* 2 */
-vertical-align: baseline; /* 3 */
-*vertical-align: middle; /* 3 */
+  font-size: 100%; /* 1 */
+  margin: 0; /* 2 */
+  vertical-align: baseline; /* 3 */
 }
 
 /**
@@ -298,7 +297,7 @@ vertical-align: baseline; /* 3 */
 
 button,
 input {
-line-height: normal;
+  line-height: normal;
 }
 
 /**
@@ -310,7 +309,7 @@ line-height: normal;
 
 button,
 select {
-text-transform: none;
+  text-transform: none;
 }
 
 /**
@@ -327,9 +326,8 @@ button,
 html input[type="button"], /* 1 */
 input[type="reset"],
 input[type="submit"] {
--webkit-appearance: button; /* 2 */
-cursor: pointer; /* 3 */
-*overflow: visible; /* 4 */
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
 }
 
 /**
@@ -338,7 +336,7 @@ cursor: pointer; /* 3 */
 
 button[disabled],
 html input[disabled] {
-cursor: default;
+  cursor: default;
 }
 
 /**
@@ -352,9 +350,9 @@ cursor: default;
 * on OS X.
 */
 
-input[type='search']::-webkit-search-cancel-button,
-input[type='search']::-webkit-search-decoration {
--webkit-appearance: none;
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
 }
 
 /**
@@ -363,8 +361,8 @@ input[type='search']::-webkit-search-decoration {
 
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-border: 0;
-padding: 0;
+  border: 0;
+  padding: 0;
 }
 
 /**
@@ -373,9 +371,9 @@ padding: 0;
 */
 
 textarea {
-overflow: auto; /* 1 */
-vertical-align: top; /* 2 */
-resize: vertical;
+  overflow: auto; /* 1 */
+  vertical-align: top; /* 2 */
+  resize: vertical;
 }
 
 /**
@@ -383,8 +381,8 @@ resize: vertical;
 */
 
 table {
-border-collapse: collapse;
-border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 html,
@@ -392,26 +390,26 @@ button,
 input,
 select,
 textarea {
-color: #000;
-padding: 0;
+  color: #000;
+  padding: 0;
 }
 
 ::-moz-selection {
-background: #b3d4fc;
-text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
 ::selection {
-background: #b3d4fc;
-text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
 img {
-vertical-align: middle;
+  vertical-align: middle;
 }
 
 fieldset {
-border: 0;
-margin: 0;
-padding: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }

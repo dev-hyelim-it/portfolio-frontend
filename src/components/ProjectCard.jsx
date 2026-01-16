@@ -1,4 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ProjectIcon from "./ProjectIcon";
 
 function ProjectCard({ project }) {
   return (
@@ -10,30 +10,23 @@ function ProjectCard({ project }) {
           {project.tech.map((t) => `_${t}`).join(" ")}
         </span>
       </p>
+
       <div className="project__card-box">
         <div className="project__card-top-box flex">
           <div
-            className={`project__card-icon-box project--icon-box-${project.className}`}
+            className={`project__card-icon-box project--icon-box-${project.theme}`}
           >
-            {project.iconType === "FontAwesome" ? (
-              <FontAwesomeIcon
-                icon={project.icon}
-                className="project__card-icon"
-              />
-            ) : (
-              <img
-                src={project.icon}
-                alt={project.desc}
-                className={`project__card-icon-img project__card-icon-${project.className}`}
-              />
-            )}
+            <ProjectIcon icon={project.icon} title={project.title} />
           </div>
+
           <img
-            src={project.img}
+            src={project.thumbnail}
             alt={project.title}
             className="project__card-img w-full object-cover"
+            loading="lazy"
           />
         </div>
+
         <div className="project__card-bottom-box">
           <p className="project__card-text orbit-regular">{project.desc}</p>
           <a
